@@ -61,8 +61,8 @@ namespace Example.Basic
                     }
                     catch (Exception ex)
                     {
-                        child2?.SetStatus(Status.Error.WithDescription(ex.Message));
-                        child2?.RecordException(ex);
+                        child2?.SetStatus(ActivityStatusCode.Error, "status description");
+                        child2?.AddException(ex);
                     }
                 }
 
